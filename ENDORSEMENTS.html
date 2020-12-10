@@ -5,17 +5,40 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" type=text/css>
 	<style>
+		body {
+    background-color: coral;
+  }
+  * {
+  box-sizing: border-box;
+}
+html {
+  font-family: "Lucida Sans", sans-serif;
+}
+
 	div.gallery {
 	  margin: 16px;
 	  float: right;
 	  width: 200px;
+	  height:auto;
 	}
+	#myDIV {
+  width: 300px;
+  height: 200px;
+  background: red;
+  animation: mymove 5s infinite;
+}
+
+@keyframes mymove {
+  from {background-color: red;}
+  to {background-color: blue;}
+}
 	</style>
 	<title>  
   		ENDORSEMENTS 
 	</title>  
+
 </head>  
-<body bgcolor="pink">  
+<body> 
 	<div class="gallery">
 	  <a target="_blank" href="C:\Users\singh\OneDrive\Desktop\CollageMaker_20201203_203053372.jpg">
 	    <img src="C:\Users\singh\OneDrive\Desktop\CollageMaker_20201203_203053372.jpg" alt="ENDORSEMENT symbol" width="200" height="140">
@@ -40,7 +63,7 @@
 		<label> Organisation/Company name </label>     
 		<input type="text" name=" Organisation/Company name " size="20"/> <br> <br>  
 		Email:  
-		<input type="email" id="email" name="email" size="43" /> <br>    
+		 <input id="email" type="email" required placeholder="example@example.com" /> <br>    
 		<br> <br>
 		Comments(optional) 
 		<br>  
@@ -57,9 +80,11 @@
   
  
 		<br> 
-		<input type="button" value="ADD ENDORSEMENT"/>  
+		<input type="submit" value="ADD ENDORSEMENT"/>  
 		<br> 
 	</form><br>
+
+
 	<div class="row">
                 <div class="col-md-2">
                     <button class="btn btn-danger btn-lg" onclick="display();" type="submit">Previous</button>
